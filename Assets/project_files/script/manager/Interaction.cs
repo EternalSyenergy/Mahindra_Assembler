@@ -74,10 +74,28 @@ public class Interaction : MonoBehaviour
 
 
     #region Langugae player
-    public void LanguageHandler()
+    void LanguageHandler()
     {
+        if (GameManager.Instance.PlayerData.mainPlayerAudio != null)
+        {
+            if (startEvent.Language.Count > 0)
+            {
+                GameManager.Instance.PlayerData.mainPlayerAudio.clip = startEvent.Language[GameManager.Instance.Languages];
+
+                if (GameManager.Instance.PlayerData.mainPlayerAudio.isPlaying)
+                GameManager.Instance.PlayerData.mainPlayerAudio.Stop();
+                InvokeRepeating("repeatedSequenceAudio", .5f, startEvent.Language[GameManager.Instance.Languages].length+10);
+
+            }
+        }
+    }
+
+    void repeatedSequenceAudio()
+    {
+        GameManager.Instance.PlayerData.mainPlayerAudio.Play();
 
     }
+
     #endregion
 
 
