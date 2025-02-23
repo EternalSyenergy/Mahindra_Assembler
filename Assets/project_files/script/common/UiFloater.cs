@@ -13,6 +13,12 @@ public class UiFloater : MonoBehaviour
     Transform defaultPlayerUiPointer;
 
     public Transform staticUiPointer;
+
+
+    float scaleProgress = 0;
+    bool isDefaultPosition = false;
+    private Vector3 velocity = Vector3.zero; // Required for SmoothDamp
+    private float smoothTime = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,35 +28,45 @@ public class UiFloater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        updateStaticUi();
     }
     private void LateUpdate()
     {
         updatePlayerHeadUi();
-        //updateStaticUi();
+        updateStaticUi();
+
     }
 
     #region player Head Ui Reference
     void PlayerHeadUiref()
     {
 
-        if (uitype == Uitype.normal)
-        {
+        playerUiPointer = GameManager.Instance.PlayerData.PlayerHeadUi;
+        defaultPlayerUiPointer = GameManager.Instance.PlayerData.PlayerHeadUi;
 
-            playerUiPointer = GameManager.Instance.PlayerData.PlayerHeadUi;
-            defaultPlayerUiPointer = GameManager.Instance.PlayerData.PlayerHeadUi;
+        defaultPlayerUiPointer = new GameObject().transform;
+        defaultPlayerUiPointer.position = GameManager.Instance.PlayerData.PlayerHeadUi.position + new Vector3(0, 0, 5f);
+        defaultPlayerUiPointer.rotation = GameManager.Instance.PlayerData.PlayerHeadUi.rotation;
 
-            defaultPlayerUiPointer.position = new Vector3(defaultPlayerUiPointer.position.x, defaultPlayerUiPointer.position.y, defaultPlayerUiPointer.position.z + 5f);
-
-        }
-    
     }
 
     void updatePlayerHeadUi()
     {
-        if (defaultPlayerUiPointer != null)
+        if (playerUiPointer != null)
         {
 
+            if (!isDefaultPosition)
+            {
+
+                transform.SetPositionAndRotation(defaultPlayerUiPointer.position,defaultPlayerUiPointer.rotation);
+                isDefaultPosition = true;
+            }
+
+
+            //transform.position = Vector3.SmoothDamp(transform.position, playerUiPointer.position, ref velocity, smoothTime);
+            transform.position = Vector3.Lerp(transform.position, playerUiPointer.position, Time.deltaTime * smoothTime);
+
+
+            transform.rotation = Quaternion.Slerp(transform.rotation, playerUiPointer.rotation, Time.deltaTime * 5);
         }
     }
     #endregion
@@ -64,13 +80,13 @@ public class UiFloater : MonoBehaviour
     {
         if (staticUiPointer != null)
         {
-           transform.SetPositionAndRotation(staticUiPointer.position, staticUiPointer.rotation);
 
 
             if (uitype == Uitype.openVerticle)
             {
-
-                //transform.localScale = new Vector3(transform.localScale.x,Mathf.Lerp(0,1,0.1f), transform.localScale.z);
+                transform.SetPositionAndRotation(staticUiPointer.position, staticUiPointer.rotation);
+                scaleProgress = Mathf.Clamp01(scaleProgress + Time.deltaTime * 0.5f); // Gradually increase over time
+                transform.localScale = new Vector3(transform.localScale.x, Mathf.Lerp(0, 1, scaleProgress), transform.localScale.z);
             }
         }
     }
@@ -91,6 +107,7 @@ public class UiFloater : MonoBehaviour
 
         staticUiPointer = temp;
         gameObject.SetActive(true);
+
     }
 
     #endregion
@@ -102,7 +119,6 @@ public class UiFloater : MonoBehaviour
         {
             case Uitype.normal:
                 transform.localScale = new Vector3(1, 1, 1);
-
                 break;
 
 
@@ -130,6 +146,8 @@ public class UiFloater : MonoBehaviour
 
     private void OnEnable()
     {
+
+        isDefaultPosition = false;
         handleUiTypeEnable();
 
     }
@@ -137,7 +155,9 @@ public class UiFloater : MonoBehaviour
 
     private void OnDisable()
     {
-        uitype = Uitype.normal;
+        isDefaultPosition = false;
+        scaleProgress = 0;
+        //uitype = Uitype.normal;
     }
 
 
