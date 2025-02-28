@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2bca07774afc2fb4b9799fc291f997ce
+guid: b47d750768a77d841a1b95b80e91c76a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,27 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: 43ed7d431219967448e0dcc2ac902145, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Diffuse map
-    second: {fileID: 2800000, guid: c7113ffcbe6249e4abad6b5c51eb1ca8, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Metallic map.001
-    second: {fileID: 2800000, guid: fe21dfcaf4edc9e419244ae2da385b1b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Normal map
-    second: {fileID: 2800000, guid: 5b2fd708c2c76d14ab9c60f677c385a0, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Roughness map
-    second: {fileID: 2800000, guid: 1fad53a1283a1ff478f2565435f55e10, type: 3}
+    second: {fileID: 2100000, guid: 1188736713516d2499a26c6a5b6d35a9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
