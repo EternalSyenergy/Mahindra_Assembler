@@ -12,12 +12,13 @@ public class SubSequence : MonoBehaviour
     private void Awake()
     {
         sequenceManager = gameObject.transform.GetComponentInParent<SequenceManager>();
+        TotalIntercationCount = gameObject.transform.childCount;
+
 
     }
     void Start()
     {
 
-        TotalIntercationCount = gameObject.transform.childCount;
 
 
     }

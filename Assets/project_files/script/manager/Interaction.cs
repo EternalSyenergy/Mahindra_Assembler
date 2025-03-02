@@ -83,8 +83,8 @@ public class Interaction : MonoBehaviour
                 GameManager.Instance.PlayerData.mainPlayerAudio.clip = startEvent.Language[GameManager.Instance.Languages];
 
                 if (GameManager.Instance.PlayerData.mainPlayerAudio.isPlaying)
-                GameManager.Instance.PlayerData.mainPlayerAudio.Stop();
-                InvokeRepeating("repeatedSequenceAudio", .5f, startEvent.Language[GameManager.Instance.Languages].length+10);
+                    GameManager.Instance.PlayerData.mainPlayerAudio.Stop();
+                InvokeRepeating("repeatedSequenceAudio", .5f, startEvent.Language[GameManager.Instance.Languages].length + 10);
 
             }
         }
@@ -99,6 +99,26 @@ public class Interaction : MonoBehaviour
     #endregion
 
 
+    #region handle content
+
+    void handleContent()
+    {
+
+        if (startEvent.content.Count > 0)
+        {
+            //GameManager.Instance.PlayerData.mainPlayerAudio.clip = startEvent.Language[GameManager.Instance.Languages];
+
+
+            //ui manger to update on ui
+
+
+            ///
+
+        }
+    }
+    #endregion
+
+
 }
 
 [Serializable]
@@ -106,8 +126,10 @@ public class startEvent
 {
     public UnityEvent Event;
     public List<AudioClip> Language;
+    public List<String> content;
     public bool isTimeIntercation;
     public float intercationTimer;
+
 
 
 }

@@ -85,7 +85,7 @@ public class UiFloater : MonoBehaviour
             if (uitype == Uitype.openVerticle)
             {
                 transform.SetPositionAndRotation(staticUiPointer.position, staticUiPointer.rotation);
-                scaleProgress = Mathf.Clamp01(scaleProgress + Time.deltaTime * 0.5f); // Gradually increase over time
+                scaleProgress = Mathf.Clamp01(scaleProgress + Time.deltaTime * 1.5f); // Gradually increase over time
                 transform.localScale = new Vector3(transform.localScale.x, Mathf.Lerp(0, 1, scaleProgress), transform.localScale.z);
             }
         }
