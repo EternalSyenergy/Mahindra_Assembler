@@ -49,6 +49,11 @@ public class Interaction : MonoBehaviour
 
     void handleCompleteEvent()
     {
+
+        ///
+        if (GameManager.Instance.PlayerData.mainPlayerAudio.isPlaying)
+            GameManager.Instance.PlayerData.mainPlayerAudio.Stop();
+        //
         subSequence.currentInteractionCount++;
         subSequence.StartInteraction();
     }
@@ -85,7 +90,7 @@ public class Interaction : MonoBehaviour
 
                 if (GameManager.Instance.PlayerData.mainPlayerAudio.isPlaying)
                     GameManager.Instance.PlayerData.mainPlayerAudio.Stop();
-                InvokeRepeating("repeatedSequenceAudio", .5f, startEvent.Language[GameManager.Instance.Languages].length + 10);
+                InvokeRepeating("repeatedSequenceAudio", .5f, startEvent.Language[GameManager.Instance.Languages].length + 25);
 
             }
         }
