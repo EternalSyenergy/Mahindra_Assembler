@@ -26,11 +26,19 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+
+    public void teleportPlayer(Transform temp)
+    {
+        PlayerData.PlayerObject.transform.SetPositionAndRotation(temp.position,temp.rotation);
+
+    }
 }
 
 [System.Serializable]
 public class PlayerData
 {
+    public GameObject PlayerObject;
     public AudioSource mainPlayerAudio;
     public Transform PlayerHeadUi;
 }

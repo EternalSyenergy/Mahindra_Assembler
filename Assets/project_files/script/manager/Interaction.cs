@@ -31,6 +31,7 @@ public class Interaction : MonoBehaviour
     {
         startEvent.Event.Invoke();
         LanguageHandler();
+        handleContent();
         HandleTimerInteraction();
 
     }
@@ -109,7 +110,9 @@ public class Interaction : MonoBehaviour
             //GameManager.Instance.PlayerData.mainPlayerAudio.clip = startEvent.Language[GameManager.Instance.Languages];
 
 
+            UiManager.instance.hintUi.hintText.text= startEvent.content[GameManager.Instance.Languages];
             //ui manger to update on ui
+
 
 
             ///

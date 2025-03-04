@@ -5994,6 +5994,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     Language: []
+    content: []
     isTimeIntercation: 1
     intercationTimer: 1
 --- !u!1001 &246693881
@@ -8875,63 +8876,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2752380185976246140, guid: c14538a346131214d9ae3a596d3ce3e2, type: 3}
   m_PrefabInstance: {fileID: 343513685}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &343574017
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.136549
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0028951317
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -12.9250765
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
-      propertyPath: m_Name
-      value: Asset
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 12331af45e02bd042a441669c9d35e86, type: 3}
 --- !u!1001 &345914398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21951,6 +21895,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Language: []
+    content: []
     isTimeIntercation: 1
     intercationTimer: 1
 --- !u!1001 &925775268
@@ -43560,6 +43505,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     Language: []
+    content: []
     isTimeIntercation: 0
     intercationTimer: 5
 --- !u!1001 &1902309314
@@ -49839,4 +49785,3 @@ SceneRoots:
   - {fileID: 657832784}
   - {fileID: 1110962657}
   - {fileID: 1315995034}
-  - {fileID: 343574017}

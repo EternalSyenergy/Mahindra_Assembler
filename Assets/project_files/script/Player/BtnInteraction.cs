@@ -1,6 +1,7 @@
 using OVR;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,19 +24,28 @@ public class BtnInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-       
+        Button temp = other.gameObject.GetComponent<Button>() != null ? other.gameObject.GetComponent<Button>() : null;
+
+        if (temp != null)
+        {
+            temp.onClick.Invoke();
+            btnsound.Play();
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
 
-        Button temp = other.gameObject.GetComponent<Button>() != null ? other.gameObject.GetComponent<Button>() : null;
+        //Button temp = other.gameObject.GetComponent<Button>() != null ? other.gameObject.GetComponent<Button>() : null;
 
-        if (temp != null) { 
-           temp.onClick.Invoke();
-            btnsound.Play();
-        }
+        //if (temp != null) { 
+        //   temp.onClick.Invoke();
+        //    btnsound.Play();
+        //}
 
     }
+
+
+  
 }

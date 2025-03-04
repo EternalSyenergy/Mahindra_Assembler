@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/project_files/Scene/main scene with wokring setup.unity
+    guid: 4e0b82857bb716c41b60270d7cdfb5bc
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1b969d83cf706014c845806f829cca89, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e6107d551ce65ab409dcb10add9fc16c, type: 2}
