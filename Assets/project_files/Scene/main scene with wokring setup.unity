@@ -70593,6 +70593,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7197140031575092714, guid: 146559d95a240ec4699b1fd70c26338f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47a6435b09f2ab644b30e9e12b73328f, type: 2}
     - target: {fileID: -7074408773778849768, guid: 146559d95a240ec4699b1fd70c26338f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -70625,6 +70629,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 221550685264364323, guid: 146559d95a240ec4699b1fd70c26338f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6f6b49d322eb8f4bb38d1afcb9db6e2, type: 2}
     - target: {fileID: 919132149155446097, guid: 146559d95a240ec4699b1fd70c26338f, type: 3}
       propertyPath: m_Name
       value: Mahindra character
@@ -70653,6 +70661,10 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4511802125309505384, guid: 146559d95a240ec4699b1fd70c26338f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6f6b49d322eb8f4bb38d1afcb9db6e2, type: 2}
     - target: {fileID: 5683484616041708374, guid: 146559d95a240ec4699b1fd70c26338f, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -70661,6 +70673,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7819508775199075298, guid: 146559d95a240ec4699b1fd70c26338f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278854767034824730, guid: 146559d95a240ec4699b1fd70c26338f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 0576b5f8d19bba64299b3959dd2d6d8e, type: 2}
+    - target: {fileID: 8278854767034824730, guid: 146559d95a240ec4699b1fd70c26338f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47a6435b09f2ab644b30e9e12b73328f, type: 2}
     - target: {fileID: 8645429842997128430, guid: 146559d95a240ec4699b1fd70c26338f, type: 3}
       propertyPath: m_IsActive
       value: 1
