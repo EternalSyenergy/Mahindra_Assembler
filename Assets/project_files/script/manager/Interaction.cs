@@ -51,8 +51,13 @@ public class Interaction : MonoBehaviour
     {
 
         ///
+        CancelInvoke("repeatedSequenceAudio");
+
         if (GameManager.Instance.PlayerData.mainPlayerAudio.isPlaying)
+        {
+
             GameManager.Instance.PlayerData.mainPlayerAudio.Stop();
+        }
         //
         subSequence.currentInteractionCount++;
         subSequence.StartInteraction();
@@ -115,7 +120,7 @@ public class Interaction : MonoBehaviour
             //GameManager.Instance.PlayerData.mainPlayerAudio.clip = startEvent.Language[GameManager.Instance.Languages];
 
 
-            UiManager.instance.hintUi.hintText.text= startEvent.content[GameManager.Instance.Languages];
+            UiManager.instance.hintUi.hintText.text = startEvent.content[GameManager.Instance.Languages];
             //ui manger to update on ui
 
 
